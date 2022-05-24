@@ -1,0 +1,208 @@
+/* ---------------------- */
+/* Fonts                  */
+/* ---------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* ---------------------- */
+/* Custom properties      */
+/* ---------------------- */
+
+:root {
+  /* Primary */
+
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+
+  --clr-very-pale-blue: hsl(228, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+
+  /*  Added by me because I can't understand schema color on annual plan card  */
+  --clr-desaturated-bright-blue: rgb(118, 108, 241);
+
+  --ff-main: "Red Hat Display", sans-serif;
+}
+
+/* ---------------------- */
+/* Reset                  */
+/* ---------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* ---------------------- */
+/* Typography             */
+/* ---------------------- */
+
+body {
+  font-size: 16px;
+  font-family: var(--ff-main);
+  background-color: var(--clr-pale-blue);
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 1.25em;
+  text-align: center;
+  color: var(--clr-dark-blue);
+}
+
+h4 {
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.5;
+  color: var(--clr-desaturated-blue);
+  text-align: center;
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+footer {
+  padding: 2em;
+}
+
+/* ---------------------- */
+/* Utility classes        */
+/* ---------------------- */
+
+.container {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ---------------------- */
+/* Buttons                */
+/* ---------------------- */
+
+.btn {
+  width: 100%;
+  border-radius: 1em;
+  padding: 1.25em 3em;
+  margin: 1em 0;
+  font-family: var(--ff-main);
+  font-weight: 700;
+  color: var(--clr-very-pale-blue);
+  background-color: var(--clr-bright-blue);
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--clr-desaturated-bright-blue);
+  box-shadow: 0 2px 4px rgba(118, 108, 241, 0.07),
+    0 4px 8px rgba(118, 108, 241, 0.07), 0 8px 16px rgba(118, 108, 241, 0.07),
+    0 16px 32px rgba(118, 108, 241, 0.07), 0 32px 64px rgba(118, 108, 241, 0.07),
+    0 64px 128px rgba(118, 108, 241, 0.07);
+}
+
+/* ---------------------- */
+/* Components             */
+/* ---------------------- */
+
+/* cards classes */
+
+.card {
+  margin: 2em auto;
+  width: min(85%, 24rem);
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1em;
+}
+
+.card__imgHero {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.card__body {
+  padding: 1.5em;
+}
+
+.card__plan {
+  font-size: 0.8em;
+  padding: 1.5em 0;
+  margin: 1.5em 0;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--clr-very-pale-blue);
+  border-radius: 1em;
+}
+
+.card__planCost {
+  align-items: center;
+  flex-direction: row;
+}
+
+.card__planCost p {
+  margin: 0;
+}
+
+.card__planCost__info {
+  margin: 0 1em;
+}
+
+.card__iconMusic {
+  max-width: 40px;
+}
+
+.card__changeLink {
+  color: var(--clr-bright-blue);
+  font-weight: bold;
+}
+
+.card__changeLink:hover,
+.card__changeLink:focus {
+  text-decoration: none;
+  color: var(--clr-desaturated-bright-blue);
+}
+
+.card__cancelLink {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  margin: 1em;
+  color: var(--clr-desaturated-blue);
+}
+
+.card__cancelLink:hover,
+.card__cancelLink:focus {
+  color: var(--clr-dark-blue);
+}
+
+/* footer */
+
+.attribution {
+  font-family: var(--ff-main);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
