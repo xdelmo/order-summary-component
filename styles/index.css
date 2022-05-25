@@ -125,7 +125,7 @@ footer {
 /* cards classes */
 
 .card {
-  margin: 2em auto;
+  margin-top: 2em;
   width: min(85%, 24rem);
   flex-direction: column;
   justify-content: center;
@@ -205,4 +205,15 @@ footer {
 .attribution a {
   text-decoration: none;
   color: hsl(228, 45%, 44%);
+}
+
+/* ---------------------- */
+/* Media queries          */
+/* ---------------------- */
+
+/* on low height screens adds a margin top to the card */
+@media (min-height: 660px) {
+  .card {
+    margin-top: 0;
+  }
 }
