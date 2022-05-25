@@ -59,7 +59,8 @@ h1 {
   color: var(--clr-dark-blue);
 }
 
-h4 {
+h2 {
+  font-size: 1em;
   font-weight: bold;
 }
 
